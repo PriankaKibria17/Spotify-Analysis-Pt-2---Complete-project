@@ -7,34 +7,26 @@ remove unique values, correct data types, as well as dropping null values. After
 the significance certain attribute may have as contributing factors for a song being considered a top 10 streaming song. All of which aided in discovering 
 which attribites compose opitmal results in streams. The findings were that the some characteristics impacted the number of times streamed. It was discovered that streams are primarily dependent on its sound characteristics and energy levels. Followers seemed to have the least impact in regards to streams.
 
-Model development: Based on using different features and my target "Streams" I have created a variation of models including KMeans, Logistic Regression, KNN, Logistic Regression, Random Forrest, all of which have been tuned with and without PCA(s). Upon reviewing all of these models it appears that the Random Forrest model without a PCA had the best performance and production as it was the closest to the original streams.
+Model development: Based on using different features and my target "Streams" I have created 2 versions of models using RandomForestRegression, and LinearRegression. It appears that the hypertuned version of the RandomForestRegression would be best since it received the best score for Streams.
 
 Below is an overview of my findings:
 
-Findings and choice of production model:
-KMeans model with 2 clusters performance: 0.18363826197079378
+The original score for RandomForestRegression:
 
-Logistic Regression with PCA: 0.9490500863557858
+Training accuracy: 0.965853733901256
+Testing accuracy: 0.8745045406666199
 
-Logistic Regression without PCA: 0.9879101899827288
+With Hypertuning the score slightly increased to:
 
-KNN Model with PCA: 0.18393782383419688
+Training accuracy: 0.9684868278552011
+Testing accuracy: 0.873736178764275
 
-KNN Model without PCA: 0.18998272884283246
+The original score for LinearRegression:
 
-LinearRegression with PCA:
+Training accuracy: 0.1561831274632005
+Testing accuracy: 0.17056333091707043
 
-Training: 0.16592114659779855 Test: 0.11571676362065952
+Linear Regression with Hypertuning, it improved slightly. However, still maintains a low score:
 
-LinearRegression without PCA:
-Training: 0.1666819894170397 Testing: 0.11021787508223613
-
-Random Forrest with PCA:
-Train: 0.9048820668318618 Test: 0.29045111948431046
-
-Random Forrest without PCA:
-Train: 0.9763793466688971 Test: 0.8331243767892835
-
-The KMeans, KNN, Linnear regression models would not be useful models as they scored below 60% in the teen number ranges. Their performance was dissatisfactory.
-
-The Logistic regression without PCA performed well with a 0.98%
+Training accuracy: 0.15999720440086207
+Testing accuracy: 0.16587903261320358
